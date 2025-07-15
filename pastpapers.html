@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Past Olympiad Papers – ChemStar AZ</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      body {
+        background-color: #002244;
+        color: #caf0f8;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        max-width: 1000px;
+        margin: 40px auto 80px;
+        padding: 0 20px;
+        flex: 1;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 2rem;
+      }
+
+      .profile-icon img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid white;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+      .profile-icon img:hover {
+        transform: scale(1.1);
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 30px;
+      }
+
+      .navbar-list {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+      }
+
+      .nav-button {
+        color: #caf0f8;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      .nav-button:hover {
+        color: #90e0ef;
+      }
+
+      .countries-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px 40px;
+        justify-items: center;
+      }
+
+      .country-box-container {
+        position: relative;
+        width: 200px;
+        text-align: center;
+      }
+
+      .country-box {
+        background: #0077b6;
+        padding: 22px 12px;
+        border-radius: 15px;
+        font-weight: 700;
+        font-size: 1.15rem;
+        cursor: pointer;
+        user-select: none;
+        box-shadow: 0 0 10px #00b4d8aa;
+        transition: background-color 0.3s ease;
+        color: #caf0f8;
+      }
+
+      .country-box:hover {
+        background-color: #0096c7;
+      }
+
+      .years-list {
+        max-height: 250px;
+        overflow-y: auto;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 87, 146, 0.85);
+        border-radius: 10px;
+        padding: 10px 18px;
+        margin-top: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+        color: #caf0f8;
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-align: left;
+        width: 140px;
+        display: none;
+        z-index: 20;
+      }
+
+      .years-list.active {
+        display: block;
+      }
+
+      .years-list a {
+        display: block;
+        color: #caf0f8;
+        text-decoration: none;
+        padding: 6px 4px;
+        border-radius: 6px;
+        transition: background-color 0.2s ease;
+      }
+
+      .years-list a:hover {
+        background-color: #00b4d8aa;
+      }
+
+      .foooot {
+        background-color: #1f7dc3;
+        text-align: center;
+        padding: 15px 0;
+        color: #caf0f8;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li><a href="index.html" class="nav-button">Home</a></li>
+          <li><a href="materials.html" class="nav-button">Materials</a></li>
+          <li><a href="questions.html" class="nav-button">Daily Questions</a></li>
+          <li><a href="community.html" class="nav-button">Community & News</a></li>
+        </ul>
+        <div class="profile-icon">
+          <a href="profile.html">
+            <img src="images/profile-default.jpg" alt="Profile" id="profile-pic" />
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Past Olympiad Papers</h1>
+
+      <div class="countries-grid">
+        <!-- Add each country box here — clean structure, no nesting -->
+        <div class="country-box-container">
+          <div class="country-box" data-country="usa">USNCO</div>
+          <div class="years-list" id="usaYears">
+            <a href="materials/usnco/2023.pdf">2023</a>
+            <a href="materials/usnco/2022.pdf">2022</a>
+            <a href="materials/usnco/2021.pdf">2021</a>
+            <a href="materials/usnco/2020.pdf">2020</a>
+            <a href="materials/usnco/2019.pdf">2019</a>
+            <a href="materials/usnco/2018.pdf">2018</a>
+            <a href="materials/usnco/2017.pdf">2017</a>
+            <a href="materials/usnco/2016.pdf">2016</a>
+            <a href="materials/usnco/2015.pdf">2015</a>
+            <a href="materials/usnco/2014.pdf">2014</a>
+            <a href="materials/usnco/2013.pdf">2013</a>
+            <a href="materials/usnco/2012.pdf">2012</a>
+            <a href="materials/usnco/2011.pdf">2011</a>
+            <a href="materials/usnco/2010.pdf">2010</a>
+            <a href="materials/usnco/2009.pdf">2009</a>
+            <a href="materials/usnco/2008.pdf">2008</a>
+            <a href="materials/usnco/2007.pdf">2007</a>
+            <a href="materials/usnco/2006.pdf">2006</a>
+            <a href="materials/usnco/2005.pdf">2005</a>
+            <a href="materials/usnco/2004.pdf">2004</a>
+            <a href="materials/usnco/2003.pdf">2003</a>
+            <a href="materials/usnco/2002.pdf">2002</a>
+            <a href="materials/usnco/2001.pdf">2001</a>
+            <a href="materials/usnco/2000.pdf">2000</a>
+            <a href="materials/usnco/1999.pdf">1999</a>
+          </div>
+        </div>
+
+        <div class="country-box-container">
+          <div class="country-box" data-country="russiaO">birazdan:)</div>
+          <div class="years-list" id="russiaOYears">
+
+          </div>
+        </div>
+
+        <div class="country-box-container">
+          <div class="country-box" data-country="turkiyeT1">Türkiye T1</div>
+          <div class="years-list" id="turkiyeT1Years">
+            <a href="materials/turkiye/T1/2024%20T1.pdf">2024</a>
+            <a href="materials/turkiye/T1/2023%20T1.pdf">2023</a>
+            <a href="materials/turkiye/T1/2022%20T1.pdf">2022</a>
+            <a href="materials/turkiye/T1/2021%24T1.pdf">2021</a>
+            <a href="materials/turkiye/T1/2020%20T1.pdf">2020</a>
+            <a href="materials/turkiye/T1/2019%20T1.pdf">2019</a>
+            <a href="materials/turkiye/T1/2018%20T1.pdf">2018</a>
+            <a href="materials/turkiye/T1/2017%20T1.pdf">2017</a>
+            <a href="materials/turkiye/T1/2016%20T1.pdf">2016</a>
+            <a href="materials/turkiye/T1/2015%20T1.pdf">2015</a>
+            <a href="materials/turkiye/T1/2014%20T1.pdf">2014</a>
+            <a href="materials/turkiye/T1/2013%20T1.pdf">2013</a>
+            <a href="materials/turkiye/T1/2012%20T1.pdf">2012</a>
+            <a href="materials/turkiye/T1/2011%20T1.pdf">2011</a>
+            <a href="materials/turkiye/T1/2010%20T1.pdf">2010</a>
+            <a href="materials/turkiye/T1/2009%20T1.pdf">2009</a>
+            <a href="materials/turkiye/T1/2008%20T1.pdf">2008</a>
+            <a href="materials/turkiye/T1/2007%20T1.pdf">2007</a>
+            <a href="materials/turkiye/T1/2006%20T1.pdf">2006</a>
+            <a href="materials/turkiye/T1/2005%20T1.pdf">2005</a>
+            <a href="materials/turkiye/T1/2004%20T1.pdf">2004</a>
+            <a href="materials/turkiye/T1/2003%20T1.pdf">2003</a>
+            <a href="materials/turkiye/T1/2002%20T1.pdf">2002</a>
+            <a href="materials/turkiye/T1/2001%20T1.pdf">2001</a>
+            <a href="materials/turkiye/T1/2000%20T1.pdf">2000</a>
+            <a href="materials/turkiye/T1/1999%20T1.pdf">1999</a>
+            <a href="materials/turkiye/T1/1998%20T1.pdf">1998</a>
+            <a href="materials/turkiye/T1/1997%20T1.pdf">1997</a>
+            <a href="materials/turkiye/T1/1996%20T1.pdf">1996</a>
+            <a href="materials/turkiye/T1/1995%20T1.pdf">1995</a>
+            <a href="materials/turkiye/T1/1994%20T1.pdf">1994</a>
+            <a href="materials/turkiye/T1/1993%20T1.pdf">1993</a>
+          </div>
+        </div>
+
+        <div class="country-box-container">
+          <div class="country-box" data-country="turkiyeT2">Türkiye T2</div>
+          <div class="years-list" id="turkiyeT2Years">
+            <a href="materials/turkiye/T2/2024%20T2.pdf">2024</a>
+            <a href="materials/turkiye/T2/2023%20T2.pdf">2023</a>
+            <a href="materials/turkiye/T2/2022%20T2.pdf">2022</a>
+            <a href="materials/turkiye/T2/2021%20T2.pdf">2021</a>
+            <a href="materials/turkiye/T2/2020%20T2.pdf">2020</a>
+            <a href="materials/turkiye/T2/2019%20T2.pdf">2019</a>
+            <a href="materials/turkiye/T2/2018%20T2.pdf">2018</a>
+            <a href="materials/turkiye/T2/2017%20T2.pdf">2017</a>
+            <a href="materials/turkiye/T2/2015%20T2.pdf">2015</a>
+            <a href="materials/turkiye/T2/2014%20T2.pdf">2014</a>
+            <a href="materials/turkiye/T2/2013%20T2.pdf">2013</a>
+            <a href="materials/turkiye/T2/2012%20T2.pdf">2012</a>
+            <a href="materials/turkiye/T2/2011%20T2.pdf">2011</a>
+            <a href="materials/turkiye/T2/2010%20T2.pdf">2010</a>
+            <a href="materials/turkiye/T2/2009%20T2.pdf">2009</a>
+            <a href="materials/turkiye/T2/2008%20T2.pdf">2008</a>
+            <a href="materials/turkiye/T2/2007%20T2.pdf">2007</a>
+            <a href="materials/turkiye/T2/2006%20T2.pdf">2006</a>
+            <a href="materials/turkiye/T2/2005%20T2.pdf">2005</a>
+            <a href="materials/turkiye/T2/2004%20T2.pdf">2004</a>
+            <a href="materials/turkiye/T2/2003%20T2.pdf">2003</a>
+            <a href="materials/turkiye/T2/2002%20T2.pdf">2002</a>
+            <a href="materials/turkiye/T2/2001%20T2.pdf">2001</a>
+            <a href="materials/turkiye/T2/2000%20T2.pdf">2000</a>
+            <a href="materials/turkiye/T2/1999%20T2.pdf">1999</a>
+            <a href="materials/turkiye/T2/1998%20T2.pdf">1998</a>
+            <a href="materials/turkiye/T2/1997%20T2.pdf">1997</a>
+            <a href="materials/turkiye/T2/1996%20T2.pdf">1996</a>
+            <a href="materials/turkiye/T2/1995%20T2.pdf">1995</a>
+            <a href="materials/turkiye/T2/1994%20T2.pdf">1994</a>
+            <a href="materials/turkiye/T2/1993%20T2.pdf">1993</a>
+          </div>
+        </div>
+        <div class="country-box-container">
+          <div class="country-box" data-country="turkiyeS">Türkiye-Selection</div>
+          <div class="years-list" id="turkiyeSYears">
+            <a href="materials/turkiye/Sechme/2023.pdf">2023</a>
+            <a href="materials/turkiye/Sechme/2022%20IChO.pdf">2022 IChO</a>
+            <a href="materials/turkiye/Sechme/2021%20IMChO.pdf">2021 IMChO</a>
+            <a href="materials/turkiye/Sechme/2021%20IChO.pdf">2021 IChO</a>
+            <a href="materials/turkiye/Sechme/2020%20IMChO.pdf">2020 IMChO</a>
+            <a href="materials/turkiye/Sechme/2020%20IMChO.pdf">2020 IChO</a>
+            <a href="materials/turkiye/Sechme/2019%20IMChO.pdf">2019 IMChO</a>
+            <a href="materials/turkiye/Sechme/2019%20IChO.pdf">2019 IChO</a>
+            <a href="materials/turkiye/Sechme/2018%20IMChO.pdf">2018 IMChO</a>
+            <a href="materials/turkiye/Sechme/2018%20IChO.pdf">2018 IChO</a>
+            <a href="materials/turkiye/Sechme/2017%20IChO.pdf">2017 IChO</a>
+          </div>
+        </div>
+
+        <div class="country-box-container">
+          <div class="country-box" data-country="azerbaijan">birazdan:)</div>
+          <div class="years-list" id="azerbaijanYears">
+            <a href="/materials/azerbaijan/2024">2025</a>
+            <a href="/materials/azerbaijan/2024s">2025 solutions</a>
+            <a href="/materials/azerbaijan/2024">2024</a>
+            <a href="/materials/azerbaijan/2024s">2024 solutions</a>
+            <a href="/materials/azerbaijan/2023">2023</a>
+            <a href="/materials/azerbaijan/2023s">2023 solutions</a>
+            <a href="/materials/azerbaijan/2022">2022</a>
+            <a href="/materials/azerbaijan/2022s">2022 solutions</a>
+            <a href="/materials/azerbaijan/2021">2021</a>
+            <a href="/materials/azerbaijan/2021s">2021 solutions</a>
+            <a href="/materials/azerbaijan/2020">2020</a>
+            <a href="/materials/azerbaijan/2020s">2020 solutions</a>
+            <a href="/materials/azerbaijan/2019">2019</a>
+            <a href="/materials/azerbaijan/2019s">2019 solutions</a>
+            <a href="/materials/azerbaijan/2018">2018</a>
+            <a href="/materials/azerbaijan/2018s">2018 solutions</a>
+            <a href="/materials/azerbaijan/2010-2017">2010-2017</a>
+          </div>
+        </div>
+
+        <div class="country-box-container">
+          <div class="country-box" data-country="sri-lanka">Sri Lanka</div>
+          <div class="years-list" id="sri-lankaYears">
+            <a href="materials/sri-lanka/2024.pdf">2024</a>
+            <a href="materials/sri-lanka/2023.pdf">2023</a>
+            <a href="materials/sri-lanka/2022.pdf">2022</a>
+            <a href="materials/sri-lanka/2022sol.pdf">2022 Solutions</a>
+            <a href="materials/sri-lanka/2020.pdf">2020</a>
+            <a href="materials/sri-lanka/2020sol.pdf">2020 Solutions</a>
+            <a href="materials/sri-lanka/2019.pdf">2019</a>
+            <a href="materials/sri-lanka/2019sol.pdf">2019 Solutions</a>
+            <a href="materials/sri-lanka/2018.pdf">2018</a>
+          </div>
+        </div>
+
+        <div class="country-box-container">
+          <div class="country-box" data-country="russiaS">birazdan:)</div>
+          <div class="years-list" id="russiaSYears">
+
+          </div>
+        </div>
+
+        <div class="country-box-container">
+          <div class="country-box" data-country="icho">birazdan:)</div>
+          <div class="years-list" id="ichoYears">
+
+          </div>
+        </div>
+
+        <div class="country-box-container">
+          <div class="country-box" data-country="imcho-t1">birazdan:)</div>
+          <div class="years-list" id="imcho-t1Years">
+
+          </div>
+        </div>
+
+        <div class="country-box-container">
+          <div class="country-box" data-country="ukraine">birazdan:)</div>
+          <div class="years-list" id="ukraineYears">
+
+          </div>
+        </div>
+
+        <div class="country-box-container">
+          <div class="country-box" data-country="imcho-t2">birazdan:)</div>
+          <div class="years-list" id="imcho-t2Years">
+
+          </div>
+        </div>
+
+        <div class="country-box-container">
+          <div class="country-box" data-country="icho-prep">birazdan:)</div>
+          <div class="years-list" id="icho-prepYears">
+
+          </div>
+        </div>
+
+        <div class="country-box-container">
+          <div class="country-box" data-country="uk">birazdan:)</div>
+          <div class="years-list" id="ukYears">
+
+          </div>
+        </div>
+
+        <div class="country-box-container">
+          <div class="country-box" data-country="austria">birazdan:)</div>
+          <div class="years-list" id="austriaYears">
+
+          </div>
+        </div>
+
+        <div class="country-box-container">
+          <div class="country-box" data-country="belarus">Belarus</div>
+          <div class="years-list" id="belarusYears">
+            <a href="materials/belarus/2010-r-en.pdf">2010</a>
+            <a href="materials/belarus/2009-r-en.pdf">2009</a>
+            <a href="materials/belarus/2008-r-en.pdf">2008</a>
+            <a href="materials/belarus/2007-r-en.pdf">2007</a>
+            <a href="materials/belarus/2006-r-en.pdf">2006</a>
+            <a href="materials/belarus/2005-r-en.pdf">2005</a>
+            <a href="materials/belarus/2004-r-en.pdf">2004</a>
+            <a href="materials/belarus/2003-r-en.pdf">2003</a>
+            <a href="materials/belarus/2002-r-en.pdf">2002</a>
+            <a href="materials/belarus/2001-r-en.pdf">2001</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="foooot">
+      <p>© 2025 ChemStar AZ. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Toggle years list on country box click
+      document.querySelectorAll(".country-box").forEach((box) => {
+        box.addEventListener("click", () => {
+          const country = box.dataset.country;
+          const yearsList = document.getElementById(country + "Years");
+          if (!yearsList) return;
+
+          // Close others
+          document.querySelectorAll(".years-list.active").forEach((list) => {
+            if (list !== yearsList) list.classList.remove("active");
+          });
+
+          yearsList.classList.toggle("active");
+        });
+      });
+
+      // Close on clicking outside
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".country-box-container")) {
+          document.querySelectorAll(".years-list.active").forEach((list) => {
+            list.classList.remove("active");
+          });
+        }
+      });
+
+      // Firebase profile image logic
+      firebase.auth().onAuthStateChanged((user) => {
+        if (user && user.photoURL) {
+          document.getElementById("profile-pic").src = user.photoURL;
+        }
+      });
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="auth-status.js"></script>
+  </body>
+</html>
